@@ -18,8 +18,8 @@
 </FORM>
 <!--This is the form that is to be submitted to the login processing back-end-->
 <FORM id="inline" method=post action="login.php">
-<INPUT name=login_username>&nbsp;&nbsp;&nbsp; 
-<INPUT name=login_password>&nbsp;&nbsp;&nbsp; 
+<INPUT name=login_username placeholder="username">&nbsp;&nbsp;&nbsp; 
+<INPUT name=login_password placeholder="password">&nbsp;&nbsp;&nbsp; 
 <INPUT type=submit class="btn btn-primary" value=Login name=login_bttn>
 <LABEL for=login_bttn></LABEL>
 </FORM>
@@ -28,10 +28,10 @@
 <!--This is the form that is to be submitted to the signup processing back-end-->
 <P>
 <FORM method=post action="signup.php">
-<INPUT name=signup_password>&nbsp;&nbsp;&nbsp; 
-<INPUT type=password name=signup_password></P>
-<P><INPUT name=email></P>
-<P><INPUT name=confirm_email></P>
+<INPUT name=signup_username placeholder="username">&nbsp;&nbsp;&nbsp; 
+<INPUT type=password name=signup_password placeholder="password"></P>
+<P><INPUT name=email placeholder="email"></P>
+<P><INPUT name=confirm_email placeholder="confirm email"></P>
 <P><INPUT type=radio name="type" id="buyer">&nbsp;<LABEL FOR="buyer">Buyer</LABEL>&nbsp;&nbsp;&nbsp; 
 <INPUT type=radio name="type" id="seller">&nbsp;<LABEL FOR="seller">Seller</LABEL></P>
 <P>
