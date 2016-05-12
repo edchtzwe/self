@@ -14,15 +14,17 @@
 	<DIV class="col-sm-4">
 		<!--This is the form that is to be submitted to the search processing back-end--> 
 		<P>
-		<FORM id="inline" method=post action="search_listing.php">
-		<INPUT name=search_field id="longtext" placeholder="search listing">&nbsp;&nbsp;&nbsp; 
+		<FORM class="inline" method=post action="search_listing.php">
+		<INPUT name=search_field class="longtext" placeholder="search listing">&nbsp;&nbsp;&nbsp; 
 		<INPUT type=submit class="btn btn-primary" value=Search name=search_bttn>
 		<LABEL for=searchBtn></LABEL>&nbsp;&nbsp;&nbsp;
 		</FORM>		
+		<P>
 	</DIV>
-	<DIV class="col-sm-4">		
+	<DIV class="col-sm-4">	
+		<P>
 		<!--This is the form that is to be submitted to the login processing back-end-->
-		<FORM id="inline" method=post action="login.php">
+		<FORM class="inline" method=post action="login.php">
 		<INPUT name=login_username placeholder="username">&nbsp;&nbsp;&nbsp; 
 		<INPUT name=login_password placeholder="password">&nbsp;&nbsp;&nbsp; 
 		<INPUT type=submit class="btn btn-primary" value=Login name=login_bttn>

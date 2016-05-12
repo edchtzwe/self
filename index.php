@@ -18,10 +18,10 @@
 		<!--This is the form that is to be submitted to the signup processing back-end-->
 		<P>
 		<FORM method=post action="signup.php">
-		<INPUT name=signup_username placeholder="username">&nbsp;&nbsp;&nbsp; 
-		<INPUT type=password name=signup_password placeholder="password"></P>
-		<P><INPUT name=email id="longtext" placeholder="email"></P>
-		<P><INPUT name=confirm_email id="longtext" placeholder="confirm email"></P>
+		<P><INPUT name=signup_username class="longtext" placeholder="username"></p> 
+		<P><INPUT type=password class="longtext" name=signup_password placeholder="password"></P>
+		<P><INPUT name=email class="longtext" placeholder="email"></P>
+		<P><INPUT name=confirm_email class="longtext" placeholder="confirm email"></P>
 		<P><INPUT type=radio name="type" id="buyer">&nbsp;<LABEL FOR="buyer">Buyer</LABEL>&nbsp;&nbsp;&nbsp; 
 		<INPUT type=radio name="type" id="seller">&nbsp;<LABEL FOR="seller">Seller</LABEL></P>
 		<P>
