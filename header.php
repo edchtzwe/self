@@ -14,24 +14,29 @@
 	<DIV class="col-sm-4">
 		<!--This is the form that is to be submitted to the search processing back-end--> 
 		<P>
-		<FORM class="inline" method=post action="search_listing.php">
-		<INPUT name=search_field class="longtext" placeholder="search listing">&nbsp;&nbsp;&nbsp; 
-		<INPUT type=submit class="btn btn-primary" value=Search name=search_bttn>
-		<LABEL for=searchBtn></LABEL>&nbsp;&nbsp;&nbsp;
+		<FORM role="form" class="inline" method=post action="search_listing.php">		
+		<DIV class="row">
+			<DIV class="form-group col-lg-10">				
+					<INPUT name=search_field type="text" class="form-control" placeholder="search listing">&nbsp;&nbsp;&nbsp;			
+					<INPUT type=submit class="btn btn-primary form-control" value=Search name=search_bttn>
+					<LABEL for=searchBtn></LABEL>&nbsp;&nbsp;&nbsp;				
+			</DIV>
+		</DIV>
 		</FORM>		
 		<P>
 	</DIV>
 	<DIV class="col-sm-4">	
 		<P>
-		<!--This is the form that is to be submitted to the login processing back-end-->
-		<FORM class="inline" method=post action="login.php">
-		<INPUT name=login_username placeholder="username">&nbsp;&nbsp;&nbsp; 
-		<INPUT name=login_password placeholder="password">&nbsp;&nbsp;&nbsp; 
-		<INPUT type=submit class="btn btn-primary" value=Login name=login_bttn>
-		<LABEL for=login_bttn></LABEL>
-		</FORM>
-		</P>
-		<HR>
+		<!--This is the form that is to be submitted to the login processing back-end-->					
+			<FORM class="form-inline" role="form" method=post action="login.php">
+			<DIV class="form-group">
+				<INPUT name=login_username class="form-control" placeholder="username">&nbsp;&nbsp;&nbsp; 
+				<INPUT name=login_password class="form-control" placeholder="password">&nbsp;&nbsp;&nbsp; 
+				<INPUT type=submit class="btn btn-primary form-control" value=Login name=login_bttn>
+				<LABEL for=login_bttn></LABEL>
+			</FORM>			
+			</DIV>
+		</P>		
 	</DIV>	
 </DIV>
 </BODY>
