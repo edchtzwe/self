@@ -34,5 +34,20 @@ else{
 }
 */
 
+//add to database
+$sql_username = '"' . $connection->real_escape_string($username) . '"';
+$sql_password = '"' . $connection->real_escape_string($password) . '"';
+$sql_email = '"' . $connection->real_escape_string($email) . '"';
+$sql_type = '"' . $connection->real_escape_string($type) . '"';
+
+$insert_row = $connection->query("INSERT INTO USERS (USERNAME, PASSWORD, EMAIL, TYPE) VALUES($sql_username, $sql_password, $sql_email, $sql_type)");
+
+//validation
+if($insert_row){
+    echo("Sign up successful.");
+}
+else{
+    //insert code to count existence of email
+}
 
 ?>
