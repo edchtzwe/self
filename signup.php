@@ -9,9 +9,12 @@ $password = $_POST['signup_password'];
 $email = $_POST['email'];
 $type = $_POST['type'];
 
-echo($type);
+//echo($username . $password . $email . $type);
 
 //store username for persistent login.
 $_SESSION['username'] = $username;
+//echo($_SESSION['username']);
+
+
 
 ?>
