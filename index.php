@@ -25,10 +25,10 @@
 			<P><INPUT required name=confirm_email class="form-control" placeholder="confirm email"></P>
 			<DIV class="radio-inline">
 				<P>
-				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer">Buyer</LABEL>
+				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer" value=0>Buyer</LABEL>
 			</DIV>
 			<DIV class="radio-inline">
-				<LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller">Seller</LABEL>
+				<LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller" value=1>Seller</LABEL>
 				</P>
 			</DIV>
 			<P>
