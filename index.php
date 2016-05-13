@@ -17,12 +17,13 @@
 	<DIV class="col-sm-4">
 		<!--This is the form that is to be submitted to the signup processing back-end-->
 		<P>
+        <FIELDSET>
+        <LEGEND>Sign Up</LEGEND>
 		<FORM method=post action="signup.php">
 		<DIV class="form-group col-lg-10">
 			<P><INPUT required name=signup_username class="form-control" placeholder="username"></p> 
 			<P><INPUT required type=password class="form-control" name=signup_password placeholder="password"></P>
-			<P><INPUT required name=email class="form-control" placeholder="email"></P>
-			<P><INPUT required name=confirm_email class="form-control" placeholder="confirm email"></P>
+			<P><INPUT required pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}" name=email class="form-control" placeholder="email"></P>			
 			<DIV class="radio-inline">
 				<P>
 				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer" value=0>Buyer</LABEL>
@@ -38,6 +39,7 @@
 			</P>
 		</DIV>
 		</FORM>
+        </FIELDSET>
 	</DIV>
 	<DIV class="col-sm-4"><!--Right Side-Bar--></DIV>
 </DIV>

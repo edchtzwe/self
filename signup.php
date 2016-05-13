@@ -47,7 +47,8 @@ if($insert_row){
     echo("Sign up successful.");
 }
 else{
-    //insert code to count existence of email
+    //email already exists
+    die("Email already exists. Please return to the last page and change it.");
 }
 
 ?>
