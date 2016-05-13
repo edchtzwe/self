@@ -16,7 +16,8 @@
 		<P>
 		<FORM role="form" class="inline" method=post action="search_listing.php">		
 		<DIV class="row">
-			<DIV class="form-group col-lg-10">				
+			<DIV class="form-group col-lg-10">			
+                <!--If empty, show all listing-->
 					<INPUT name=search_field type="text" class="form-control" placeholder="search listing">&nbsp;&nbsp;&nbsp;			
 					<INPUT type=submit class="btn btn-primary form-control" value=Search name=search_bttn>									
 			</DIV>
@@ -29,8 +30,8 @@
 		<!--This is the form that is to be submitted to the login processing back-end-->					
 			<FORM class="form-inline" role="form" method=post action="login.php">
 			<DIV class="form-group">
-				<INPUT name=login_username class="form-control" placeholder="username">&nbsp;&nbsp;&nbsp; 
-				<INPUT name=login_password class="form-control" placeholder="password">&nbsp;&nbsp;&nbsp; 
+				<INPUT required name=login_username class="form-control" placeholder="username">&nbsp;&nbsp;&nbsp; 
+				<INPUT required name=login_password class="form-control" placeholder="password">&nbsp;&nbsp;&nbsp; 
 				<INPUT type=submit class="btn btn-primary form-control" value=Login name=login_bttn>
 				<LABEL for=login_bttn></LABEL>
 			</FORM>			
