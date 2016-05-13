@@ -18,16 +18,25 @@
 		<!--This is the form that is to be submitted to the signup processing back-end-->
 		<P>
 		<FORM method=post action="signup.php">
-		<P><INPUT name=signup_username class="longtext" placeholder="username"></p> 
-		<P><INPUT type=password class="longtext" name=signup_password placeholder="password"></P>
-		<P><INPUT name=email class="longtext" placeholder="email"></P>
-		<P><INPUT name=confirm_email class="longtext" placeholder="confirm email"></P>
-		<P><INPUT type=radio name="type" id="buyer">&nbsp;<LABEL FOR="buyer">Buyer</LABEL>&nbsp;&nbsp;&nbsp; 
-		<INPUT type=radio name="type" id="seller">&nbsp;<LABEL FOR="seller">Seller</LABEL></P>
-		<P>
-		<INPUT type=submit class="btn btn-primary" value="Sign Up" name=signup>
-		<LABEL for=signup></LABEL>
-		</P>
+		<DIV class="form-group col-lg-10">
+			<P><INPUT name=signup_username class="form-control" placeholder="username"></p> 
+			<P><INPUT type=password class="form-control" name=signup_password placeholder="password"></P>
+			<P><INPUT name=email class="form-control" placeholder="email"></P>
+			<P><INPUT name=confirm_email class="form-control" placeholder="confirm email"></P>
+			<DIV class="radio-inline">
+				<P>
+				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer">Buyer</LABEL>
+			</DIV>
+			<DIV class="radio-inline">
+				<LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller">Seller</LABEL>
+				</P>
+			</DIV>
+			<P>
+			<DIV class="row">
+			<INPUT type=submit class="btn btn-primary col-lg-12" value="Sign Up" name=signup>
+			</DIV>
+			</P>
+		</DIV>
 		</FORM>
 	</DIV>
 	<DIV class="col-sm-4"><!--Right Side-Bar--></DIV>

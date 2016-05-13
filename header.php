@@ -18,8 +18,7 @@
 		<DIV class="row">
 			<DIV class="form-group col-lg-10">				
 					<INPUT name=search_field type="text" class="form-control" placeholder="search listing">&nbsp;&nbsp;&nbsp;			
-					<INPUT type=submit class="btn btn-primary form-control" value=Search name=search_bttn>
-					<LABEL for=searchBtn></LABEL>&nbsp;&nbsp;&nbsp;				
+					<INPUT type=submit class="btn btn-primary form-control" value=Search name=search_bttn>									
 			</DIV>
 		</DIV>
 		</FORM>		
