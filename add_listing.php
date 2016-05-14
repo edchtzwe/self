@@ -29,6 +29,10 @@
                         <OPTION value=3>Other</OPTION>
                         </SELECT>
                     </P>
+                    <LABEL FOR="kitchen_other">
+                        If other, please specify: 
+                        <INPUT class="form-control" placeholder="Other" name=kitchen_other>
+                    </LABEL>  
                 </FIELDSET>
                 <br>
                 <FIELDSET>
@@ -64,6 +68,7 @@
                 <fieldset>
                 <legend>Availability</legend>
                     <P>
+<<<<<<< HEAD
                         <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon>Monday</LABEL>
                         <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue>Tuesday</LABEL>
                         <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed>Wednesday</LABEL>
@@ -73,6 +78,54 @@
                         <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun>Sunday</LABEL>
                     </P>
                 </fieldset>
+=======
+                        <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue id=tue>Tuesday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed id=wed>Wednesday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=thu><INPUT value="3" type=checkbox name=thu id=thu>Thursday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=fri><INPUT value="4" type=checkbox name=fri id=fri>Friday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat id=sat>Saturday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun id=sun>Sunday</LABEL>
+                    </P>
+                    <p>
+                        <fieldset>
+                        <legend>Timeslot</legend>
+                            <P>
+                                <INPUT class="form-control" placeholder="eg. 0800-1200, 1400-1600" name=timeslot>
+                            </P>
+                        </fieldset>
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                <legend>Details</legend>                    
+                        <LABEL FOR="size">
+                            Size: <INPUT class="form-control" placeholder="S/M/L/XL" name=size>
+                        </LABEL> 
+                        <br>
+                        <LABEL FOR="price">
+                            Price(AUD): <INPUT class="form-control" placeholder="pricing per hour" name=price>
+                        </LABEL>  
+                </fieldset>
+                <br>
+                <fieldset>
+                <legend>Features</legend>
+                    <LABEL class="checkbox-inline" FOR=coolroom><INPUT value="0" type=checkbox name=coolroom id=coolroom>Coolroom</LABEL>
+                    <LABEL class="checkbox-inline" FOR=store><INPUT value="1" type=checkbox name=store id=store>Store</LABEL>
+                    <LABEL class="checkbox-inline" FOR=oven><INPUT value="2" type=checkbox name=oven id=oven>Oven</LABEL>
+                    <LABEL class="checkbox-inline" FOR=storage><INPUT value="3" type=checkbox name=storage id=storage>Storage</LABEL>      
+                    <br>
+                    <br>
+                    <p>
+                    <LABEL FOR=other_features>
+                    Other features
+                    <INPUT class="form-control" placeholder="eg. meat slicer, mincer" name=other_features id=other_features>
+                    </LABEL>
+                    </p>
+                </fieldset>                
+                <br>
+                <INPUT type=submit class="btn btn-primary col-lg-12" value="Add Listing" name=add_listing>
+>>>>>>> develop
             </FORM>            
         </P>
         </div>
