@@ -14,7 +14,7 @@
 ?>	
 <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-5">
+    <div class="col-sm-4">
 		<!--This is the form that is to be submitted to the add_listing processing back-end-->
 		<P>
             <FORM method=post action="add_listing_process.php" class="col-sm-8">
@@ -38,31 +38,30 @@
                         <p>
                         <P>
                     <select class="form-control" name="state">
-                        <option value="0" selected>State</option>
-                        <option value="1">ACT</option>
-                        <option value="2">NSW</option>
-                        <option value="3">NT</option>
-                        <option value="4">QLD</option>
-                        <option value="5">SA</option>
-                        <option value="6">TAS</option>
-                        <option value="7">VIC</option>
-                        <option value="8">WA</option>
+                        <option value="act">ACT</option>
+                        <option value="nsw">NSW</option>
+                        <option value="nt">NT</option>
+                        <option value="qld">QLD</option>
+                        <option value="sa">SA</option>
+                        <option value="tas">TAS</option>
+                        <option value="vic">VIC</option>
+                        <option value="wa">WA</option>
                     </select> 
                         </p>
-                        <P><INPUT placeholder="city" class="form-control" name=loc_city></P>
+                            <P><INPUT class="form-control" name=loc_city></P>
                     </div>
                     <!--side-by-side-->
                     <div class="col-sm-6">
                         <P><INPUT class="form-control" placeholder="street name" name=loc_street></P>
-                        <p><INPUT class="form-control" placeholder="postcode" name=loc_pcode></p>
-                        <p><INPUT class="form-control" placeholder="country" name=loc_country></p>
+                        <p><INPUT class="form-control" name=loc_pcode></p>
+                        <p><INPUT class="form-control" name=loc_country></p>
                     </div>
                     </div>
                 </FIELDSET>
             </FORM>            
         </P>
         </div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-4"></div>
 </div>                        
 </BODY>
 </HTML>
