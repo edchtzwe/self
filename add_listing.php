@@ -15,29 +15,23 @@
 <DIV class="row">
 	<DIV class="col-sm-4"><!--Left Side-Bar--></DIV>
 	<DIV class="col-sm-4">
-		<!--This is the form that is to be submitted to the signup processing back-end-->
+		<!--This is the form that is to be submitted to the add_listing processing back-end-->
 		<P>
-		<FORM method=post action="signup.php">
-		<DIV class="form-group col-lg-10">
-			<P><INPUT required name=signup_username class="form-control" placeholder="username"></p> 
-			<P><INPUT required type=password class="form-control" name=signup_password placeholder="password"></P>
-			<P><INPUT required name=email class="form-control" placeholder="email"></P>
-			<P><INPUT required name=confirm_email class="form-control" placeholder="confirm email"></P>
-			<DIV class="radio-inline">
-				<P>
-				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer" value=0>Buyer</LABEL>
-			</DIV>
-			<DIV class="radio-inline">
-				<LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller" value=1>Seller</LABEL>
-				</P>
-			</DIV>
-			<P>
-			<DIV class="row">
-			<INPUT type=submit class="btn btn-primary col-lg-12" value="Sign Up" name=signup>
-			</DIV>
-			</P>
-		</DIV>
-		</FORM>
+            <FIELDSET>
+                <legend>Basic Details</legend>
+                <FORM method=post action="add_listing_process.php" class="col-lg-10">
+                    <P><INPUT placeholder="kitchen name" class="form-control" name=kitchen_name></P>
+                    <P>
+                        <SELECT class="form-control" name=kitchen_type>
+                        <OPTION selected value=0>Cafe</OPTION>
+                        <OPTION value=1>Restaurant</OPTION>
+                        <OPTION value=2>Bar</OPTION>
+                        <OPTION value=3>Other</OPTION>
+                        </SELECT>
+                    </P>
+                </FORM>
+            </FIELDSET>
+        </P>
 	</DIV>
 	<DIV class="col-sm-4"><!--Right Side-Bar--></DIV>
 </DIV>

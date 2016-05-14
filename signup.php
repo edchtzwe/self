@@ -51,4 +51,10 @@ else{
     die("Email already exists. Please return to the last page and change it.");
 }
 
+//close the connection
+mysqli_close($connection);
+
+//link over to add listing
+header('Location: add_listing.php');
+
 ?>

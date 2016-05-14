@@ -20,24 +20,24 @@
         <FIELDSET>
         <LEGEND>Sign Up</LEGEND>
 		<FORM method=post action="signup.php">
-		<DIV class="form-group col-lg-10">
-			<P><INPUT required name=signup_username class="form-control" placeholder="username"></p> 
-			<P><INPUT required type=password class="form-control" name=signup_password placeholder="password"></P>
-			<P><INPUT required pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}" name=email class="form-control" placeholder="email"></P>			
-			<DIV class="radio-inline">
-				<P>
-				<LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer" value=0>Buyer</LABEL>
-			</DIV>
-			<DIV class="radio-inline">
-				<LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller" value=1>Seller</LABEL>
-				</P>
-			</DIV>
-			<P>
-			<DIV class="row">
-			<INPUT type=submit class="btn btn-primary col-lg-12" value="Sign Up" name=signup>
-			</DIV>
-			</P>
-		</DIV>
+            <DIV class="form-group col-lg-10">
+                <P><INPUT required name=signup_username class="form-control" placeholder="username"></p> 
+                <P><INPUT required type=password class="form-control" name=signup_password placeholder="password"></P>
+                <P><INPUT required pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}" name=email class="form-control" placeholder="email"></P>			
+                <DIV class="radio-inline">
+                    <P>
+                    <LABEL FOR="buyer" class="radio-inline"><INPUT type=radio name="type" id="buyer" value=0>Buyer</LABEL>
+                </DIV>
+                <DIV class="radio-inline">
+                    <LABEL FOR="seller" class="radio-inline"><INPUT type=radio name="type" id="seller" value=1>Seller</LABEL>
+                    </P>
+                </DIV>
+                <P>
+                <DIV class="row">
+                <INPUT type=submit class="btn btn-primary col-lg-12" value="Sign Up" name=signup>
+                </DIV>
+                </P>
+            </DIV>
 		</FORM>
         </FIELDSET>
 	</DIV>
