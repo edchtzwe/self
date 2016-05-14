@@ -29,6 +29,10 @@
                         <OPTION value=3>Other</OPTION>
                         </SELECT>
                     </P>
+                    <LABEL FOR="kitchen_other">
+                        If other, please specify: 
+                        <INPUT class="form-control" placeholder="Other" name=kitchen_other>
+                    </LABEL>  
                 </FIELDSET>
                 <br>
                 <FIELDSET>
@@ -86,7 +90,11 @@
                 <legend>Details</legend>                    
                         <LABEL FOR="size">
                             Size: <INPUT class="form-control" placeholder="S/M/L/XL" name=size>
-                        </LABEL>                    
+                        </LABEL> 
+                        <br>
+                        <LABEL FOR="price">
+                            Price(AUD): <INPUT class="form-control" placeholder="pricing per hour" name=price>
+                        </LABEL>  
                 </fieldset>
             </FORM>            
         </P>
