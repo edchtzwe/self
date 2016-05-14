@@ -102,14 +102,18 @@
                     <LABEL class="checkbox-inline" FOR=coolroom><INPUT value="0" type=checkbox name=coolroom id=coolroom>Coolroom</LABEL>
                     <LABEL class="checkbox-inline" FOR=store><INPUT value="1" type=checkbox name=store id=store>Store</LABEL>
                     <LABEL class="checkbox-inline" FOR=oven><INPUT value="2" type=checkbox name=oven id=oven>Oven</LABEL>
-                    <LABEL class="checkbox-inline" FOR=storage><INPUT value="3" type=checkbox name=storage id=storage>Storage</LABEL>                    
+                    <LABEL class="checkbox-inline" FOR=storage><INPUT value="3" type=checkbox name=storage id=storage>Storage</LABEL>      
+                    <br>
+                    <br>
                     <p>
                     <LABEL FOR=other_features>
                     Other features
                     <INPUT class="form-control" placeholder="eg. meat slicer, mincer" name=other_features id=other_features>
                     </LABEL>
                     </p>
-                </fieldset>
+                </fieldset>                
+                <br>
+                <INPUT type=submit class="btn btn-primary col-lg-12" value="Add Listing" name=add_listing>
             </FORM>            
         </P>
         </div>
