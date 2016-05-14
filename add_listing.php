@@ -72,6 +72,21 @@
                         <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat>Saturday</LABEL>
                         <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun>Sunday</LABEL>
                     </P>
+                    <p>
+                        <fieldset>
+                        <legend>Timeslot</legend>
+                            <P>
+                                <INPUT class="form-control" placeholder="eg. 0800-1200, 1400-1600" name=timeslot>
+                            </P>
+                        </fieldset>
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                <legend>Details</legend>                    
+                        <LABEL FOR="size">
+                            Size: <INPUT class="form-control" placeholder="S/M/L/XL" name=size>
+                        </LABEL>                    
                 </fieldset>
             </FORM>            
         </P>
