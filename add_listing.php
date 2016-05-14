@@ -30,6 +30,7 @@
                         </SELECT>
                     </P>
                 </FIELDSET>
+                <br>
                 <FIELDSET>
                 <LEGEND>Address</LEGEND>
                     <div class="row">
@@ -59,6 +60,19 @@
                     </div>
                     </div>
                 </FIELDSET>
+                <br>
+                <fieldset>
+                <legend>Availability</legend>
+                    <P>
+                        <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon>Monday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue>Tuesday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed>Wednesday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=thu><INPUT value="3" type=checkbox name=thu>Thursday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=fri><INPUT value="4" type=checkbox name=fri>Friday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat>Saturday</LABEL>
+                        <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun>Sunday</LABEL>
+                    </P>
+                </fieldset>
             </FORM>            
         </P>
         </div>
