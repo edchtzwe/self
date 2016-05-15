@@ -69,7 +69,7 @@
                 <legend>Availability</legend>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL></P>
+                        <P>Monday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_mon>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=tue><INPUT value="0" type=checkbox name=tue id=tue>Tuesday</LABEL></P>
+                        <P>Tuesday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_tue>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=wed><INPUT value="0" type=checkbox name=wed id=wed>Wednesday</LABEL></P>
+                        <P>Wednesday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_wed>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=thu><INPUT value="0" type=checkbox name=thu id=thu>Thursday</LABEL></P>
+                        <P>Thursday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_thu>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=fri><INPUT value="0" type=checkbox name=fri id=fri>Friday</LABEL></P>
+                        <P>Friday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_fri>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=sat><INPUT value="0" type=checkbox name=sat id=sat>Saturday</LABEL></P>
+                        <P>Saturday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sat>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="row">
                         <span class="checkbox col-sm-6">
-                        <P><LABEL FOR=sun><INPUT value="0" type=checkbox name=sun id=sun>Sunday</LABEL></P>
+                        <P>Sunday</P>
                         </span>
                         <span class="col-sm-6">
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sun>

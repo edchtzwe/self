@@ -12,22 +12,12 @@ $loc_city = $_POST["loc_city"];
 $loc_state = $_POST["loc_state"];
 $loc_pcode = $POST["loc_pcode"];
 
-//this chunk over here takes care of the checkboxes and text for availability
-//can be changed to only include timeslots
-//if timeslot is empty, then the day is unavailable.
-$mon_check = $_POST["mon"];
 $time_mon = $_POST["time_mon"];
-$tue_check = $_POST["tue"];
 $time_tue = $_POST["time_tue"];
-$wed_check = $_POST["wed"];
 $time_wed = $_POST["time_wed"];
-$thu_check = $_POST["thu"];
 $time_thu = $_POST["time_thu"];
-$fri_check = $_POST["fri"];
 $time_fri = $_POST["time_fri"];
-$sat_check = $_POST["sat"];
 $time_sat = $_POST["time_sat"];
-$sun_check = $_POST["sun"];
 $time_sun = $_POST["time_sun"];
 
 $size = $_POST["size"];
@@ -38,5 +28,21 @@ $store = $_POST["store"];
 $oven = $_POST["oven"];
 
 $other_features = $_POST["other_features"];
+
+//now that we have the variables, it's time to construct the sql queries
+
+//connect to dbms
+//credentials
+$db_host = "localhost";
+$db_username = "root";
+$db_password = "root";
+$db_name = "sproutkitchen";
+
+//connect
+$connection = new mysqli($db_host, $db_username, $db_password, $db_name);
+//exception handling
+if($connection->connect_error){
+    die("Connection to database could not be established. Please check if server is running and credentials.");       
+}
 
 ?>
