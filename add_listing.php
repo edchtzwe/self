@@ -67,36 +67,6 @@
                 <br>
                 <fieldset>
                 <legend>Availability</legend>
-<<<<<<< HEAD
-                    <P>
-<<<<<<< HEAD
-                        <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon>Monday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue>Tuesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed>Wednesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=thu><INPUT value="3" type=checkbox name=thu>Thursday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=fri><INPUT value="4" type=checkbox name=fri>Friday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat>Saturday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun>Sunday</LABEL>
-                    </P>
-                </fieldset>
-=======
-                        <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue id=tue>Tuesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed id=wed>Wednesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=thu><INPUT value="3" type=checkbox name=thu id=thu>Thursday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=fri><INPUT value="4" type=checkbox name=fri id=fri>Friday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat id=sat>Saturday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun id=sun>Sunday</LABEL>
-                    </P>
-                    <p>
-                        <fieldset>
-                        <legend>Timeslot</legend>
-                            <P>
-                                <INPUT class="form-control" placeholder="eg. 0800-1200, 1400-1600" name=timeslot>
-                            </P>
-                        </fieldset>
-                    </p>
-=======
                     <div class="row">
                         <span class="checkbox col-sm-6">
                         <P><LABEL FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL></P>
@@ -153,7 +123,6 @@
                         <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sun>
                         </span>
                     </div>                   
->>>>>>> develop
                 </fieldset>
                 <br>
                 <fieldset>
@@ -184,7 +153,6 @@
                 </fieldset>                
                 <br>
                 <INPUT type=submit class="btn btn-primary col-lg-12" value="Add Listing" name=add_listing>
->>>>>>> develop
             </FORM>            
         </P>
         </div>
