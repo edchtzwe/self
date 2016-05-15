@@ -11,7 +11,7 @@
 <BODY>
 <DIV class="row">
 	<DIV class="col-sm-4"></DIV>
-	<DIV class="col-sm-4">
+	<DIV class="col-sm-5">
 		<!--This is the form that is to be submitted to the search processing back-end--> 
 		<P>
 		<FORM role="form" class="inline" method=post action="search_listing.php">		
@@ -25,13 +25,15 @@
 		</FORM>		
 		<P>
 	</DIV>
-	<DIV class="col-sm-4">	
+	<DIV class="col-sm-3">	
 		<P>
 		<!--This is the form that is to be submitted to the login processing back-end-->					
 			<FORM class="form-inline" role="form" method=post action="login.php">
 			<DIV class="form-group">
-				<INPUT required name=login_username class="form-control" placeholder="username">&nbsp;&nbsp;&nbsp; 
-				<INPUT required name=login_password class="form-control" placeholder="password">&nbsp;&nbsp;&nbsp; 
+				<INPUT required name=login_username class="form-control" placeholder="username">
+                <br>
+                <br>
+				<INPUT required name=login_password class="form-control" placeholder="password">
 				<INPUT type=submit class="btn btn-primary form-control" value=Login name=login_bttn>
 				<LABEL for=login_bttn></LABEL>
 			</FORM>			

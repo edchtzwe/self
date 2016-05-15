@@ -14,7 +14,7 @@
 ?>	
 <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-5">
+    <div class="col-sm-7">
 		<!--This is the form that is to be submitted to the add_listing processing back-end-->
 		<P>
             <FORM method=post action="add_listing_process.php" class="col-sm-8">
@@ -23,10 +23,11 @@
                     <P><INPUT placeholder="kitchen name" class="form-control " name=kitchen_name></P>
                     <P>
                         <SELECT class="form-control" name=kitchen_type>
-                        <OPTION selected value=0>Cafe</OPTION>
-                        <OPTION value=1>Restaurant</OPTION>
-                        <OPTION value=2>Bar</OPTION>
-                        <OPTION value=3>Other</OPTION>
+                        <OPTION selected value=0>Kitchen Type</OPTION>
+                        <OPTION value=1>Cafe</OPTION>
+                        <OPTION value=2>Restaurant</OPTION>
+                        <OPTION value=3>Bar</OPTION>
+                        <OPTION value=4>Other</OPTION>
                         </SELECT>
                     </P>
                     <LABEL FOR="kitchen_other">
@@ -39,55 +40,93 @@
                 <LEGEND>Address</LEGEND>
                     <div class="row">
                     <div class="col-sm-6">
-                        <P><INPUT class="form-control" placeholder="street number" name=loc_number></INPUT></P>
-                        <p>
-                        <P>
-                    <select class="form-control" name="state">
-                        <option value="0" selected>State</option>
-                        <option value="1">ACT</option>
-                        <option value="2">NSW</option>
-                        <option value="3">NT</option>
-                        <option value="4">QLD</option>
-                        <option value="5">SA</option>
-                        <option value="6">TAS</option>
-                        <option value="7">VIC</option>
-                        <option value="8">WA</option>
-                    </select> 
-                        </p>
+                        <P><INPUT class="form-control" placeholder="street number" name=loc_number></INPUT></P>   
+                        <p><INPUT class="form-control" placeholder="suburb" name=loc_suburb></p>                   
                         <P><INPUT placeholder="city" class="form-control" name=loc_city></P>
                     </div>
                     <!--side-by-side-->
                     <div class="col-sm-6">
                         <P><INPUT class="form-control" placeholder="street name" name=loc_street></P>
-                        <p><INPUT class="form-control" placeholder="postcode" name=loc_pcode></p>
-                        <p><INPUT class="form-control" placeholder="country" name=loc_country></p>
+                        <P>
+                        <select class="form-control" name="state">
+                            <option value="0" selected>State</option>
+                            <option value="1">ACT</option>
+                            <option value="2">NSW</option>
+                            <option value="3">NT</option>
+                            <option value="4">QLD</option>
+                            <option value="5">SA</option>
+                            <option value="6">TAS</option>
+                            <option value="7">VIC</option>
+                            <option value="8">WA</option>
+                        </select> 
+                        </p>
+                        <p><INPUT class="form-control" placeholder="postcode" name=loc_pcode></p>       
                     </div>
                     </div>
                 </FIELDSET>
                 <br>
                 <fieldset>
                 <legend>Availability</legend>
-                    <P>
-                        <LABEL class="checkbox-inline" FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=tue><INPUT value="1" type=checkbox name=tue id=tue>Tuesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=wed><INPUT value="2" type=checkbox name=wed id=wed>Wednesday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=thu><INPUT value="3" type=checkbox name=thu id=thu>Thursday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=fri><INPUT value="4" type=checkbox name=fri id=fri>Friday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sat><INPUT value="5" type=checkbox name=sat id=sat>Saturday</LABEL>
-                        <LABEL class="checkbox-inline" FOR=sun><INPUT value="6" type=checkbox name=sun id=sun>Sunday</LABEL>
-                    </P>
-                    <p>
-                        <fieldset>
-                        <legend>Timeslot</legend>
-                            <P>
-                                <INPUT class="form-control" placeholder="eg. 0800-1200, 1400-1600" name=timeslot>
-                            </P>
-                        </fieldset>
-                    </p>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=mon><INPUT value="0" type=checkbox name=mon id=mon>Monday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_mon>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=tue><INPUT value="0" type=checkbox name=tue id=tue>Tuesday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_tue>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=wed><INPUT value="0" type=checkbox name=wed id=wed>Wednesday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_wed>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=thu><INPUT value="0" type=checkbox name=thu id=thu>Thursday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_thu>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=fri><INPUT value="0" type=checkbox name=fri id=fri>Friday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_fri>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=sat><INPUT value="0" type=checkbox name=sat id=sat>Saturday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sat>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="checkbox col-sm-6">
+                        <P><LABEL FOR=sun><INPUT value="0" type=checkbox name=sun id=sun>Sunday</LABEL></P>
+                        </span>
+                        <span class="col-sm-6">
+                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sun>
+                        </span>
+                    </div>                   
                 </fieldset>
                 <br>
                 <fieldset>
-                <legend>Details</legend>                    
+                <legend>Details</legend>
                         <LABEL FOR="size">
                             Size: <INPUT class="form-control" placeholder="S/M/L/XL" name=size>
                         </LABEL> 
@@ -117,7 +156,7 @@
             </FORM>            
         </P>
         </div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-1"></div>
 </div>                        
 </BODY>
 </HTML>
