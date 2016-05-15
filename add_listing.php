@@ -23,11 +23,11 @@
                     <P><INPUT placeholder="kitchen name" class="form-control " name=kitchen_name></P>
                     <P>
                         <SELECT class="form-control" name=kitchen_type>
-                        <OPTION selected value=0>Kitchen Type</OPTION>
-                        <OPTION value=1>Cafe</OPTION>
-                        <OPTION value=2>Restaurant</OPTION>
-                        <OPTION value=3>Bar</OPTION>
-                        <OPTION value=4>Other</OPTION>
+                            <OPTION selected value=0>Kitchen Type</OPTION>
+                            <OPTION value=1>Cafe</OPTION>
+                            <OPTION value=2>Restaurant</OPTION>
+                            <OPTION value=3>Bar</OPTION>
+                            <OPTION value=4>Other</OPTION>
                         </SELECT>
                     </P>
                     <LABEL FOR="kitchen_other">
@@ -48,7 +48,7 @@
                     <div class="col-sm-6">
                         <P><INPUT class="form-control" placeholder="street name" name=loc_street></P>
                         <P>
-                        <select class="form-control" name="state">
+                        <select class="form-control" name="loc_state">
                             <option value="0" selected>State</option>
                             <option value="1">ACT</option>
                             <option value="2">NSW</option>
@@ -140,8 +140,7 @@
                 <legend>Features</legend>
                     <LABEL class="checkbox-inline" FOR=coolroom><INPUT value="0" type=checkbox name=coolroom id=coolroom>Coolroom</LABEL>
                     <LABEL class="checkbox-inline" FOR=store><INPUT value="1" type=checkbox name=store id=store>Store</LABEL>
-                    <LABEL class="checkbox-inline" FOR=oven><INPUT value="2" type=checkbox name=oven id=oven>Oven</LABEL>
-                    <LABEL class="checkbox-inline" FOR=storage><INPUT value="3" type=checkbox name=storage id=storage>Storage</LABEL>      
+                    <LABEL class="checkbox-inline" FOR=oven><INPUT value="2" type=checkbox name=oven id=oven>Oven</LABEL>    
                     <br>
                     <br>
                     <p>
