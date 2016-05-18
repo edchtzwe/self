@@ -34,6 +34,9 @@
                         If other, please specify: 
                         <INPUT class="form-control" placeholder="Other" name=kitchen_other>
                     </LABEL>  
+                    <P>
+                        <INPUT class="form-control" placeholder="Phone" name=kitchen_phone>
+                    </P>
                 </FIELDSET>
                 <br>
                 <FIELDSET>

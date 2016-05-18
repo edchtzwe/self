@@ -16,11 +16,13 @@ if($connection->connect_error){
 
 //for user id
 $ID = '"' . $connection->real_escape_string($_SESSION['ID']) . '"';
+/*
+INSERT CODE TO EXTRACT ID FOR BRANCHING PURPOSES HERE
 //if user ID already exists, then the user is starting a branch, so we will have to add a suffix to it.
 //use ascii to determine next ascii
 $sql = $connection->query("SELECT COUNT(*) FROM KITCHEN WHERE ID LIKE '8%'");
-die($sql);
-/*
+*/
+
 //extract all post fields and store as variables
 $kitchen_name = $_POST["kitchen_name"];
 $kitchen_type = $_POST["kitchen_type"];
@@ -54,5 +56,5 @@ $other_features = '"' . $connection->real_escape_string($_POST["other_features"]
 //handle basic details section
 $statement = "INSERT INTO KITCHEN (USERNAME, PASSWORD, EMAIL, TYPE) VALUES($sql_username, $sql_password, $sql_email, $sql_type)"
 $sql = $connection->query();
-*/
+
 ?>
