@@ -75,7 +75,7 @@
                         <P>Monday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_mon>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_mon>
                         </span>
                     </div>
                     <div class="row">
@@ -83,7 +83,7 @@
                         <P>Tuesday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_tue>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_tue>
                         </span>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@
                         <P>Wednesday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_wed>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_wed>
                         </span>
                     </div>
                     <div class="row">
@@ -99,7 +99,7 @@
                         <P>Thursday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_thu>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_thu>
                         </span>
                     </div>
                     <div class="row">
@@ -107,7 +107,7 @@
                         <P>Friday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_fri>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_fri>
                         </span>
                     </div>
                     <div class="row">
@@ -115,7 +115,7 @@
                         <P>Saturday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sat>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_sat>
                         </span>
                     </div>
                     <div class="row">
@@ -123,7 +123,7 @@
                         <P>Sunday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. 0800, 1200, 1500" name=time_sun>
+                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_sun>
                         </span>
                     </div>                   
                 </fieldset>
