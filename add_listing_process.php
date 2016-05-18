@@ -24,11 +24,16 @@ $sql = $connection->query("SELECT COUNT(*) FROM KITCHEN WHERE ID LIKE '8%'");
 */
 
 //extract all post fields and store as variables
-$kitchen_name = $_POST["kitchen_name"];
-$kitchen_type = $_POST["kitchen_type"];
+
+//basic details
+$kitchen_name = '"' . $connection->real_escape_string($_POST["kitchen_name"]) . '"';
+$kitchen_type = '"' . $connection->real_escape_string($_POST["kitchen_type"]) . '"';
 if($kitchen_type == 4){
-    $kitchen_type = $_POST["kitchen_other"];
+    $kitchen_type = '"' . $connection->real_escape_string($_POST["kitchen_other"]) . '"';
 }
+$kitchen_phone = '"' . $connection->real_escape_string($_POST["kitchen_phoen"]) . '"';
+
+//address
 $loc_number = '"' . $connection->real_escape_string($_POST["loc_number"]) . '"';
 $loc_suburb = '"' . $connection->real_escape_string($_POST["loc_suburb"]) . '"';
 $loc_city = '"' . $connection->real_escape_string($_POST["loc_city"]) . '"';
