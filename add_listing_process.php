@@ -15,7 +15,7 @@ if($connection->connect_error){
 }
 
 //for user id
-$ID = '"' . $connection->real_escape_string($_SESSION['ID']) . '"';
+$user_id = '"' . $connection->real_escape_string($_SESSION['ID']) . '"';
 /*
 INSERT CODE TO EXTRACT ID FOR BRANCHING PURPOSES HERE
 //if user ID already exists, then the user is starting a branch, so we will have to add a suffix to it.
@@ -55,11 +55,15 @@ $coolroom = '"' . $connection->real_escape_string($_POST["coolroom"]) . '"';
 $store = '"' . $connection->real_escape_string($_POST["store"]) . '"';
 $oven = '"' . $connection->real_escape_string($_POST["oven"]) . '"';
 
+//use binary code as text to depict which feature is covered
+//eg, 111 will mean the kitchen has all features
+//101 means the kitchen has coolroom(s) and oven(s)
+
 $other_features = '"' . $connection->real_escape_string($_POST["other_features"]) . '"';
 
 //construct the sql statements
 //handle basic details section
-$statement = "INSERT INTO KITCHEN (USERNAME, PASSWORD, EMAIL, TYPE) VALUES($sql_username, $sql_password, $sql_email, $sql_type)"
+$statement = "INSERT INTO KITCHEN (user_id, name, type, phone, size, price, features, other_features) VALUES($sql_username, $sql_password, $sql_email, $sql_type)"
 $sql = $connection->query();
 
 ?>

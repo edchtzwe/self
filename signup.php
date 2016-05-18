@@ -46,7 +46,7 @@ if($insert_row){
     //echo($_SESSION['username']);
     //store user_id for later
     $user_id = $connection->query("SELECT ID FROM USERS WHERE EMAIL = $sql_email")->fetch_object()->ID;
-    $_SESSION['ID'] = $user_id;
+    $_SESSION['user_id'] = $user_id;
 }
 else{
     //email already exists
