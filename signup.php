@@ -44,6 +44,9 @@ if($insert_row){
     //store username for persistent login.
     $_SESSION['username'] = $username;
     //echo($_SESSION['username']);
+    //store user_id for later
+    $user_id = $connection->query("SELECT ID FROM USERS WHERE EMAIL = $sql_email")->fetch_object()->ID;
+    $_SESSION['ID'] = $user_id;
 }
 else{
     //email already exists
