@@ -15,7 +15,8 @@ if($connection->connect_error){
 }
 
 //for user id
-$user_id = '"' . $connection->real_escape_string($_SESSION['ID']) . '"';
+$user_id = $_SESSION['user_id'];
+
 /*
 INSERT CODE TO EXTRACT ID FOR BRANCHING PURPOSES HERE
 //if user ID already exists, then the user is starting a branch, so we will have to add a suffix to it.
@@ -27,11 +28,11 @@ $sql = $connection->query("SELECT COUNT(*) FROM KITCHEN WHERE ID LIKE '8%'");
 
 //basic details
 $kitchen_name = '"' . $connection->real_escape_string($_POST["kitchen_name"]) . '"';
-$kitchen_type = '"' . $connection->real_escape_string($_POST["kitchen_type"]) . '"';
+$kitchen_type = $_POST["kitchen_type"];
 if($kitchen_type == 4){
     $kitchen_type = '"' . $connection->real_escape_string($_POST["kitchen_other"]) . '"';
 }
-$kitchen_phone = '"' . $connection->real_escape_string($_POST["kitchen_phoen"]) . '"';
+$kitchen_phone = '"' . $connection->real_escape_string($_POST["kitchen_phone"]) . '"';
 
 //address
 $loc_number = '"' . $connection->real_escape_string($_POST["loc_number"]) . '"';
@@ -51,19 +52,46 @@ $time_sun = '"' . $connection->real_escape_string($_POST["time_sun"]) . '"';
 $size = '"' . $connection->real_escape_string($_POST["size"]) . '"';
 $price = '"' . $connection->real_escape_string($_POST["price"]) . '"';
 
-$coolroom = '"' . $connection->real_escape_string($_POST["coolroom"]) . '"';
-$store = '"' . $connection->real_escape_string($_POST["store"]) . '"';
-$oven = '"' . $connection->real_escape_string($_POST["oven"]) . '"';
+$coolroom = $_POST["coolroom"];
+$store = $_POST["store"];
+$oven = $_POST["oven"];
 
 //use binary code as text to depict which feature is covered
 //eg, 111 will mean the kitchen has all features
 //101 means the kitchen has coolroom(s) and oven(s)
+$features = "";
+if(isset($coolroom)){    
+    $features = $features . "1,";    
+}
+else{
+    $features = $features . "0,";
+}
+if(isset($store)){
+    $features = $features . "1,";
+}
+else{
+    $features = $features . "0,";
+}
+if(isset($oven)){
+    $features = $features . "1";
+}
+else{
+    $features = $features . "0";
+}
+
+$features = '"' . $connection->real_escape_string($features) . '"';
 
 $other_features = '"' . $connection->real_escape_string($_POST["other_features"]) . '"';
 
 //construct the sql statements
 //handle basic details section
-$statement = "INSERT INTO KITCHEN (user_id, name, type, phone, size, price, features, other_features) VALUES($sql_username, $sql_password, $sql_email, $sql_type)"
-$sql = $connection->query();
+$row = $connection->query("INSERT INTO KITCHEN (user_id, name, type, phone, size, price, features, other_features) VALUES($user_id, $kitchen_name, $kitchen_type, $kitchen_phone, $size, $price, $features, $other_features)");
+
+if($row){
+    echo("Success");
+}
+else{
+    die("Failed");
+}
 
 ?>

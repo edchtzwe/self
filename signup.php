@@ -40,7 +40,7 @@ $insert_row = $connection->query("INSERT INTO USERS (USERNAME, PASSWORD, EMAIL, 
 
 //validation
 if($insert_row){
-    echo("Sign up successful.");
+    //echo("Sign up successful.");
     //store username for persistent login.
     $_SESSION['username'] = $username;
     //echo($_SESSION['username']);
