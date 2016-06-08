@@ -80,10 +80,15 @@ $other_features = '"' . $connection->real_escape_string($_POST["other_features"]
 //handle basic details section
 $row = $connection->query("INSERT INTO KITCHEN (name, type, phone, size, price, features, other_features, email) VALUES($kitchen_name, $kitchen_type, $kitchen_phone, $size, $price, $features, $other_features, $email)");
 
-if($row){
-    echo("Success");
+//get kitchen id from the entered row and use it to populate the kitchen id field of the location table
+if($row){ //only proceed if the kitchen was actually added into the database.
+    $res = $connection->query("SELECT ID FROM kitchen WHERE name = $kitchen_name AND type = $kitchen_type AND phone = $kitchen_phone AND email = $email");
+    if($res->num_rows > 0){
+        $ID = $res->fetch_object()->ID;
+        die($ID);
+    }
 }
-else{
+else{ //duplicate entry found. Notify user.
     die("Failed");
 }
 
