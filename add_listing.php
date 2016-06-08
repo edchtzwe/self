@@ -5,24 +5,30 @@
 <link rel="stylesheet" type="text/css" href="style1.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="jquery.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="add_listing_check.js" type="text/javascript"></script>
 </HEAD>
 <BODY>	
 <?php
 	include_once("header.php");
+    if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
+    $_SESSION['page'] = "add_listing.php";    
 ?>	
 <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-7">
 		<!--This is the form that is to be submitted to the add_listing processing back-end-->
 		<P>
-            <FORM method=post action="add_listing_process.php" class="col-sm-8">
+            <FORM method=post action="add_listing_process.php" class="col-sm-8" name="listing" id="listing">
                 <FIELDSET>
                 <legend>Basic Details</legend>
-                    <P><INPUT placeholder="kitchen name" class="form-control " name=kitchen_name></P>
+                    <P><INPUT placeholder="kitchen name" required class="form-control " name=kitchen_name></P>
                     <P>
-                        <SELECT class="form-control" name=kitchen_type>
+                        <INPUT pattern="\d{10}" class="form-control" placeholder="Phone" name=kitchen_phone>
+                    </P>
+                    <P>
+                        <SELECT class="form-control" name=kitchen_type id=kitchen_type>
                             <OPTION selected value=0>Kitchen Type</OPTION>
                             <OPTION value=1>Cafe</OPTION>
                             <OPTION value=2>Restaurant</OPTION>
@@ -30,28 +36,27 @@
                             <OPTION value=4>Other</OPTION>
                         </SELECT>
                     </P>
+                    <!--javascript check here-->
                     <LABEL FOR="kitchen_other">
-                        If other, please specify: 
-                        <INPUT class="form-control" placeholder="Other" name=kitchen_other>
-                    </LABEL>  
-                    <P>
-                        <INPUT class="form-control" placeholder="Phone" name=kitchen_phone>
-                    </P>
+                        If other, please specify type: 
+                        <INPUT class="form-control" placeholder="Other" name=kitchen_other id=kitchen_other>
+                    </LABEL>                      
                 </FIELDSET>
                 <br>
                 <FIELDSET>
                 <LEGEND>Address</LEGEND>
                     <div class="row">
                     <div class="col-sm-6">
-                        <P><INPUT class="form-control" placeholder="street number" name=loc_number></INPUT></P>   
-                        <p><INPUT class="form-control" placeholder="suburb" name=loc_suburb></p>                   
-                        <P><INPUT placeholder="city" class="form-control" name=loc_city></P>
+                        <P><INPUT class="form-control" pattern="\d{0,4}" required placeholder="unit number" name=loc_number id=loc_number></INPUT></P>   
+                        <p><INPUT required pattern="[a-zA-Z]{1,25}" class="form-control" placeholder="suburb" name=loc_suburb></p>                   
+                        <P><INPUT required pattern="[a-zA-Z]+" placeholder="city" class="form-control" name=loc_city></P>
                     </div>
                     <!--side-by-side-->
                     <div class="col-sm-6">
-                        <P><INPUT class="form-control" placeholder="street name" name=loc_street></P>
+                        <P><INPUT class="form-control" required placeholder="street name" name=loc_street></P>
                         <P>
-                        <select class="form-control" name="loc_state">
+                        <!--javascript check here-->
+                        <select class="form-control" name="loc_state" id="loc_state">
                             <option value="0" selected>State</option>
                             <option value="1">ACT</option>
                             <option value="2">NSW</option>
@@ -62,20 +67,21 @@
                             <option value="7">VIC</option>
                             <option value="8">WA</option>
                         </select> 
-                        </p>
-                        <p><INPUT class="form-control" placeholder="postcode" name=loc_pcode></p>       
+                        </p>                        
+                        <p><INPUT class="form-control" required pattern="\d{4}" placeholder="postcode eg. 3000" name=loc_pcode></p>       
                     </div>
                     </div>
                 </FIELDSET>
                 <br>
                 <fieldset>
                 <legend>Availability</legend>
+                    <!--Use jquery onchange to parse input on the fly and update the box-->
                     <div class="row">
                         <span class="checkbox col-sm-6">
                         <P>Monday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_mon>
+                        <INPUT class="form-control time"  placeholder="eg. start-end, 0800-1300" name=time_mon id=time_mon>
                         </span>
                     </div>
                     <div class="row">
@@ -83,7 +89,7 @@
                         <P>Tuesday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_tue>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_tue id=time_tue>
                         </span>
                     </div>
                     <div class="row">
@@ -91,7 +97,7 @@
                         <P>Wednesday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_wed>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_wed id=time_wed>
                         </span>
                     </div>
                     <div class="row">
@@ -99,7 +105,7 @@
                         <P>Thursday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_thu>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_thu id=time_thu>
                         </span>
                     </div>
                     <div class="row">
@@ -107,7 +113,7 @@
                         <P>Friday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_fri>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_fri id=time_fri>
                         </span>
                     </div>
                     <div class="row">
@@ -115,7 +121,7 @@
                         <P>Saturday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_sat>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_sat id=time_sat>
                         </span>
                     </div>
                     <div class="row">
@@ -123,7 +129,7 @@
                         <P>Sunday</P>
                         </span>
                         <span class="col-sm-6">
-                        <INPUT class="form-control" placeholder="eg. start-end, 0800-1300" name=time_sun>
+                        <INPUT class="form-control time" placeholder="eg. start-end, 0800-1300" name=time_sun id=time_sun>
                         </span>
                     </div>                   
                 </fieldset>
@@ -131,11 +137,12 @@
                 <fieldset>
                 <legend>Details</legend>
                         <LABEL FOR="size">
-                            Size: <INPUT class="form-control" placeholder="S/M/L/XL" name=size>
+                            Size: <INPUT class="form-control" required placeholder="S/M/L/XL" pattern="^[a-zA-Z]{1,2}$" name=size>
                         </LABEL> 
                         <br>
+                        <!--jquery test if price-->
                         <LABEL FOR="price">
-                            Price(AUD): <INPUT class="form-control" placeholder="pricing per hour" name=price>
+                            Price(AUD): <INPUT class="form-control" placeholder="pricing per hour" name=price id=price>
                         </LABEL>  
                 </fieldset>
                 <br>
@@ -154,11 +161,12 @@
                     </p>
                 </fieldset>                
                 <br>
-                <INPUT type=submit class="btn btn-primary col-lg-12" value="Add Listing" name=add_listing>
+                <INPUT type=submit class="btn btn-primary col-lg-12" value="Add Listing" name=add_listing id=add_listing>
             </FORM>            
         </P>
         </div>
     <div class="col-sm-1"></div>
-</div>                        
+</div>       
+<span hidden id="pass">false</span>
 </BODY>
 </HTML>

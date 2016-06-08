@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2016 at 03:24 PM
+-- Generation Time: Jun 02, 2016 at 11:05 AM
 -- Server version: 5.6.28
 -- PHP Version: 7.0.2
 
@@ -27,26 +27,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `kitchen` (
-  `user_id` int(11) NOT NULL,
-  `kitchen_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `phone` int(12) NOT NULL,
-  `size` int(11) NOT NULL,
+  `size` varchar(128) NOT NULL,
   `price` double NOT NULL,
-  `coolroom` int(11) NOT NULL,
-  `store` int(11) NOT NULL,
-  `oven` int(11) NOT NULL,
-  `other_features` varchar(255) NOT NULL
+  `features` varchar(16) NOT NULL,
+  `other_features` varchar(255) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `kitchen_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `kitchen`
---
-
-INSERT INTO `kitchen` (`user_id`, `kitchen_id`, `name`, `type`, `phone`, `size`, `price`, `coolroom`, `store`, `oven`, `other_features`) VALUES
-(0, 1, 'asdf', 'afsdfsfs', 0, 0, 0, 0, 0, 0, ''),
-(0, 2, '', '', 0, 0, 0, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -90,18 +80,20 @@ CREATE TABLE `times` (
 CREATE TABLE `users` (
   `username` varchar(32) NOT NULL,
   `password` varchar(16) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `type` int(11) NOT NULL,
-  `ID` int(11) NOT NULL
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Userbase table. ';
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `password`, `email`, `type`, `ID`) VALUES
-('fasdfs', 'sadfafs', 'adsfs@soemthing.com', 1, 2),
-('drwerwerwe', 'uroweuriewo', 'adsfs@sothing.com', 1, 8);
+INSERT INTO `users` (`username`, `password`, `email`) VALUES
+('test2', 'test', 'test2@mail.com'),
+('test3', 'test', 'test3@mail.com'),
+('test4', 'TETS', 'test4@mail.com'),
+('test5', 'test', 'test5@mail.com'),
+('test6', 'test', 'test6@mail.com'),
+('test', 'test', 'test@mail.com');
 
 --
 -- Indexes for dumped tables
@@ -111,7 +103,8 @@ INSERT INTO `users` (`username`, `password`, `email`, `type`, `ID`) VALUES
 -- Indexes for table `kitchen`
 --
 ALTER TABLE `kitchen`
-  ADD PRIMARY KEY (`kitchen_id`);
+  ADD PRIMARY KEY (`kitchen_id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `location`
@@ -129,8 +122,7 @@ ALTER TABLE `times`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`email`),
-  ADD UNIQUE KEY `ID` (`ID`);
+  ADD PRIMARY KEY (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -140,12 +132,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `kitchen`
 --
 ALTER TABLE `kitchen`
-  MODIFY `kitchen_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `kitchen_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

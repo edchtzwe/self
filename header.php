@@ -1,7 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
 <!--Chong Tze Wei @ Edmund; 7440820@gmail.com; https://github.com/edchtzwe; https://au.linkedin.com/in/chong-tze-wei-7b7564103;-->
 <HTML><HEAD><TITLE>Sprout Kitchens</TITLE>
-<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content='text/html; charset=utf-8' http-equiv=Content-Type>
 <link rel="stylesheet" type="text/css" href="style1.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -25,21 +25,15 @@
 		</FORM>		
 		<P>
 	</DIV>
-	<DIV class="col-sm-3">	
-		<P>
-		<!--This is the form that is to be submitted to the login processing back-end-->					
-			<FORM class="form-inline" role="form" method=post action="login.php">
-			<DIV class="form-group">
-				<INPUT required name=login_username class="form-control" placeholder="username">
-                <br>
-                <br>
-				<INPUT required name=login_password class="form-control" placeholder="password">
-				<INPUT type=submit class="btn btn-primary form-control" value=Login name=login_bttn>
-				<LABEL for=login_bttn></LABEL>
-			</FORM>			
-			</DIV>
-		</P>		
-	</DIV>	
+<?php
+        if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
+        if(isset($_SESSION['email'])){
+            include_once('logged_in.php');
+        }
+        else{
+            include_once('login.php');
+        }        
+?>
 </DIV>
 </BODY>
 </HTML>
